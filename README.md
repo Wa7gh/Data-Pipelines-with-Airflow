@@ -64,7 +64,7 @@ I created custom operators to perform tasks such as staging the data, filling th
 4- AWS account and Redshift cluster.
 
 ## Build Instructions
-- Run /opt/airflow.start.sh to start the Airflow server.
+- Run /opt/airflow/start.sh to start the Airflow server.
 - Go to http://localhost:8080
 - 
 
