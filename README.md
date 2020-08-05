@@ -12,9 +12,9 @@ I created custom operators to perform tasks such as staging the data, filling th
 
 ## Project Template
 ### There are three major components of the project:
-1- Dag template with all imports and task templates.
-2- Operators folder with operator templates.
-3- Helper class with SQL transformations.
+1- Dag template with all imports and task templates.\n
+2- Operators folder with operator templates.\n
+3- Helper class with SQL transformations.\n
 ### Add default parameters to the Dag template as follows:
 - Dag does not have dependencies on past runs
 - On failure, tasks are retried 3 times
