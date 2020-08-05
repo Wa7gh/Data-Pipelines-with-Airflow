@@ -56,8 +56,11 @@ I created custom operators to perform tasks such as staging the data, filling th
 ## Requirements:
 
 1- Install Python3.
+
 2- Install Docker.
+
 3- Install Docker Compose.
+
 4- AWS account and Redshift cluster.
 
 ## Build Instructions
