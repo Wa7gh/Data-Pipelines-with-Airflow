@@ -53,6 +53,15 @@ I created custom operators to perform tasks such as staging the data, filling th
 - Receives one or more SQL based test cases along with the expected results and executes the tests.
 - Test result and expected results are checked and if there is no match, operator should raise an exception and the task should retry and fail eventually.
 
+##Requirements:
+
+1- Install Python3.
+2- Install Docker.
+3- Install Docker Compose.
+4- AWS account and Redshift cluster.
 
 ## Build Instructions
-### Run /opt/airflow.start.sh to start the Airflow server
+- Run /opt/airflow.start.sh to start the Airflow server.
+- Go to http://localhost:8080
+- 
+
