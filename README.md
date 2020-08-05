@@ -1,17 +1,17 @@
 # Data-Pipelines-with-Airflow
 
-##Purpose
+## Purpose
 
-###The music streaming company, Sparkify, wants to automate and monitor their data warehouse ETL pipelines using Apache Airflow. Our goal is to build high-grade data pipelines that are dynamic and built from reusable tasks, can be monitored and allow easy backfills. We also want to improve data quality by running tests against the dataset after the ETL steps are complete in order to catch any discrepancies.
+### The music streaming company, Sparkify, wants to automate and monitor their data warehouse ETL pipelines using Apache Airflow. Our goal is to build high-grade data pipelines that are dynamic and built from reusable tasks, can be monitored and allow easy backfills. We also want to improve data quality by running tests against the dataset after the ETL steps are complete in order to catch any discrepancies.
 
 The source data is in S3 and needs to be processed in Sparkify's data warehouse in Amazon Redshift. The source data are CSV logs containing user activity in the application and JSON metadata about the songs the users listen to.
 
-##Airflow Tasks
+## Airflow Tasks
 
-###I created custom operators to perform tasks such as staging the data, filling the data warehouse and running checks. The tasks will need to be linked together to achieve a coherent and sensible data flow within the pipeline.
+### I created custom operators to perform tasks such as staging the data, filling the data warehouse and running checks. The tasks will need to be linked together to achieve a coherent and sensible data flow within the pipeline.
 
-##Project Template
-###There are three major components of the project:
+## Project Template
+### There are three major components of the project:
 Dag template with all imports and task templates.
 Operators folder with operator templates.
 Helper class with SQL transformations.
@@ -44,5 +44,5 @@ Run checks on the data
 Receives one or more SQL based test cases along with the expected results and executes the tests
 Test result and expected results are checked and if there is no match, operator should raise an exception and the task should retry and fail eventually
 
-##Build Instructions
-###Run /opt/airflow.start.sh to start the Airflow server
+## Build Instructions
+### Run /opt/airflow.start.sh to start the Airflow server
