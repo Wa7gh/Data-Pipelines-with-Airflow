@@ -67,7 +67,7 @@ I created custom operators to perform tasks such as staging the data, filling th
 - Run /opt/airflow/start.sh to start the Airflow server.
 - Go to http://localhost:8080
 
- ![Test Image 2](img/airflowUI.png)
+ ![Test Image 2](img/AirflowUI.png)
 
 - ## Connect Airflow to AWS
     1- Click on the Admin tab and select Connections.
