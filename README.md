@@ -66,5 +66,45 @@ I created custom operators to perform tasks such as staging the data, filling th
 ## Build Instructions
 - Run /opt/airflow/start.sh to start the Airflow server.
 - Go to http://localhost:8080
-- 
+- ![Test Image 1](airflowUI.png)
+- ## Connect Airflow to AWS
+    1- Click on the Admin tab and select Connections.
+
+![Test Image 2](ConnAws.png)
+
+2-Under Connections, select Create.
+
+3- On the create connection page, enter the following values:
+
+- Conn Id: Enter aws_credentials.
+ - Conn Type: Enter Amazon Web Services.
+ - Login: Enter your Access key ID from the IAM User credentials.
+ - Password: Enter your Secret access key from the IAM User credentials.
+
+![Test Image 3](InfoAws.png)
+Once you've entered these values, select Save and Add Another.
+
+
+4. On the next create connection page, enter the following values:
+- Conn Id: Enter redshift.
+ - Conn Type: Enter Postgres.
+- Host: Enter the endpoint of your Redshift cluster, excluding the port at the end.
+- Schema: Enter dev. This is the Redshift database you want to connect to.
+ - Login: Enter awsuser.
+- Password: Enter the password you created when launching your Redshift cluster.
+- Port: Enter 5439.
+
+![Test Image 3](InfoAws1.png)
+
+Once you've entered these values, select Save.
+
+
+## Start the DAG
+Start the DAG by switching it state from OFF to ON.
+
+Refresh the page and click on the s3_to_redshift_dag to view the current state.
+
+The whole pipeline should take around 10 minutes to complete.
+
+![Test Image 3](StartDAG.png)
 
