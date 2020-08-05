@@ -27,22 +27,28 @@ I created custom operators to perform tasks such as staging the data, filling th
 
 
 ### There are four operators:
-1- Stage operator
+1- Stage operator: 
+
 - Loads JSON and CSV files from S3 to Amazon Redshift
 - Creates and runs a SQL COPY statement based on the parameters provided
 - Parameters should specify where in S3 file resides and the target table
 - Parameters should distinguish between JSON and CSV files
-- Contain a templated field that allows it to load timestamped files from S3 based on the execution time and run backfills
-2- Fact and Dimension Operators
-- Use SQL helper class to run data transformations
-- Take as input a SQL statement and target database to run query against
-- Define a target table that will contain results of the transformation
-- Dimension loads are often done with truncate-insert pattern where target table is emptied before the load
-- Fact tables are usually so massive that they should only allow append type functionality
-3- Data Quality Operator
-- Run checks on the data
-- Receives one or more SQL based test cases along with the expected results and executes the tests
-- Test result and expected results are checked and if there is no match, operator should raise an exception and the task should retry and fail eventually
+- Contain a templated field that allows it to load timestamped files from S3 based on the execution time and run backfills.
+
+2- Fact and Dimension Operators: 
+
+- Use SQL helper class to run data transformations.
+- Take as input a SQL statement and target database to run query against.
+- Define a target table that will contain results of the transformation.
+- Dimension loads are often done with truncate-insert pattern where target table is emptied before the load.
+- Fact tables are usually so massive that they should only allow append type functionality.
+
+3- Data Quality Operator:
+
+- Run checks on the data.
+- Receives one or more SQL based test cases along with the expected results and executes the tests.
+- Test result and expected results are checked and if there is no match, operator should raise an exception and the task should retry and fail eventually.
+
 
 ## Build Instructions
 ### Run /opt/airflow.start.sh to start the Airflow server
