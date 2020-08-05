@@ -27,7 +27,7 @@ I created custom operators to perform tasks such as staging the data, filling th
 - Do not email on retry
 ### The task dependencies should generate the following graph view:
 
-![Test Image 1](airflow_dag.png)
+![Test Image 1](img/airflow_dag.png)
 
 
 ### There are four operators:
